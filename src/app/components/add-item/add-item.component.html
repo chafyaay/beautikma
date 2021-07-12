@@ -1,0 +1,5 @@
+<div class="add-to-cart">
+    <button [disabled]="nbrItems<=1" class="btn primary" (click)="updateCart(-1)">-</button>
+    <button class="btn secondary">{{nbrItems}}</button>
+    <button [disabled]="nbrItems>=product.stock"  class="btn primary" (click)="updateCart(1)">+</button>
+</div>

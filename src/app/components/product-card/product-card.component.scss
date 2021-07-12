@@ -1,0 +1,61 @@
+.card-container {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(235, 235, 233);
+  margin: 1rem 0;
+  border-radius: 5px;
+  border-bottom-width: 3px;
+  padding: 0.5rem 0;
+  &.card-1 {
+    display: flex;
+  }
+  .title {
+    font-size: 14px;
+    margin-bottom: 0.7rem;
+  }
+  .prd-image {
+    width: 100px;
+    height: 100px;
+    border-width: 1px;
+    border-color: lightblue;
+    border-style: solid;
+    background-size: cover;
+    margin: 0 10px;
+    .prommo {
+      background: rgba(255, 99, 71, 0.822);
+      color: white;
+      width: 80%;
+      font-size: 14px;
+      padding: 5px;
+    }
+  }
+  .stock {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    &.in {
+      color: green;
+    }
+    &.out {
+      color: tomato;
+    }
+  }
+  .price {
+    margin: 0.21rem 0 0 0;
+    &.discounted {
+      display: flex;
+      .old {
+        text-decoration: line-through;
+      }
+      .new {
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    .details {
+      flex-grow: 1;
+      margin: 0 1rem;
+    }
+  }
+}

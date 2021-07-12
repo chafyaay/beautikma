@@ -1,0 +1,20 @@
+.tab-items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .item-label{
+        border: 1px solid #ac9f9f;
+        height: 44px;
+        padding: 10px;
+        flex-grow: 1;
+            }
+    &.active{
+        .item-label{
+            border: 1px solid #ac9f9f;
+            height: 44px;
+            background: tomato;
+            padding: 10px;
+                }
+    }
+
+}

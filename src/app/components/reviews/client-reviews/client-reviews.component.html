@@ -1,0 +1,32 @@
+
+<button (click)="addReview=true">Ajouter Avis</button>
+<app-star-review [reviews]="reviewers"></app-star-review>
+<div *ngFor="let reviewer of reviewers,let idx=index">
+    <div class="reviewer flex">
+        <div class="avatar">
+            <img src="{{reviewer.avatar}}" alt="">
+        </div>
+        <div>
+            <label>{{reviewer.name}}</label>
+            <div class="reviews-star">
+                <app-star-review [reviewRate]="reviewers[idx].reviewRate"></app-star-review>
+            </div>
+        </div>
+    </div>
+
+    <label class="title">
+        {{reviewer.title}}
+    </label>
+    <label class="date">
+        {{reviewer.commentDate}}
+    </label>
+    <label class="comment">
+        {{reviewer.comment}}
+    </label>
+
+</div>
+
+<ng-container  *ngIf="addReview">
+        <app-add-review></app-add-review>
+    </ng-container>
+    

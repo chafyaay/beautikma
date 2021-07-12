@@ -1,0 +1,39 @@
+
+
+<div class="modal">
+<div class="header">
+    <h1>Ajouter Avis</h1>
+</div>
+<div class="content" [formGroup]="addReviewForm">
+    <div class="form-group">
+        <label for="">Nom & Prénom:</label>
+        <input class="form-control" formControlName="name" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="">Email:</label>
+        <input class="form-control" formControlName="email" type="text">
+    </div>
+    
+    <div class="form-group">
+        <label for="">Téléphone:</label>
+        <input class="form-control" formControlName="phone" type="text">
+    </div>
+
+    <div class="form-group">
+        <label for="">Titre:</label>
+        <input class="form-control" formControlName="title" >
+    </div>
+
+    <div class="form-group">
+        <label for="">Commentaire:</label>
+        <textarea class="form-control" formControlName="comment" ></textarea>
+    </div>
+
+    <button (click)="addReviewSubmit()">
+        Ajouter votre avis
+    </button>
+
+</div>
+</div>
+

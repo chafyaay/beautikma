@@ -1,0 +1,25 @@
+    <div class="flex">
+        <div *ngFor="let details of productExtraDetails;let idx_item=index"
+        (click)="selectedTabIdx=idx_item"  class="tab-items" [ngClass]="{'active':selectedTabIdx===idx_item}">
+        <h2 class="item-label">
+        {{details.label}}
+        </h2>
+    </div>
+    </div>
+<div
+  *ngFor="let details of productExtraDetails;let idx_content=index">
+  <div *ngIf="selectedTabIdx===idx_content">
+      <ng-container [ngSwitch]="idx_content"> 
+        <ng-template [ngSwitchCase]="0">
+          <div id="desc-container-{{idx_content}}">
+            {{details.value}}
+          </div>
+          
+        </ng-template>
+        <ng-template [ngSwitchCase]="1">
+            <app-client-reviews [reviewers]="details.value" ></app-client-reviews>
+        </ng-template>
+      </ng-container>
+    {{details.content}}
+  </div>
+</div>

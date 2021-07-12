@@ -1,0 +1,19 @@
+<ng-container [ngSwitch]="showNotifApp.msgType">
+  <ng-template [ngSwitchCase]="'update-cart'">
+    <div class="message-container" [ngClass]="showNotifApp.success?'success':'fail'">
+      <label class="message-title">Article ahouté au panier</label>
+      <button class="btn primary" (click)="goTocart()">Panier</button>
+    </div>
+
+  </ng-template>
+  <ng-template>
+    message 2
+  </ng-template>
+  <ng-template>
+    message 3
+  </ng-template>
+  <ng-template>
+    message 4
+  </ng-template>
+</ng-container>
+<!-- {success: true, show: false} -->

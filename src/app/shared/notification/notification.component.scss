@@ -1,0 +1,14 @@
+.message-container {
+  display: flex;
+  padding: 1rem;
+  &.success {
+    background: lightgreen;
+  }
+  &.fail {
+    background: tomato;
+  }
+  .message-title {
+    font-size: 13px;
+    color: rgb(49, 75, 49);
+  }
+}
